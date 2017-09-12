@@ -84,7 +84,7 @@ public class TimerViewController extends ViewController {
 
     @OnClick(R.id.button_start_timer)
     public void startTimer(View v) {
-        // Check if timer is paused and not finished
+        // Check pause and finish state
         if(timer.isPaused() && !timer.isFinished()) {
             // Timer is being resumed
             timer.pause(false);
@@ -103,6 +103,11 @@ public class TimerViewController extends ViewController {
                 // Start count down
                 timer.startCountdown(startTime);
             } catch(NumberFormatException ex) {
+                /*
+                 * Since I've specified android:inputType="number" in the layout
+                 * this will only occur when you try to start the timer when
+                 * the edittext is empty.
+                 */
                 showError(resources.getString(R.string.error));
             }
 

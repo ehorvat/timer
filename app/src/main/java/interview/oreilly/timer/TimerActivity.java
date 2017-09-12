@@ -16,7 +16,8 @@ public class TimerActivity extends AppCompatActivity {
 
     /*
      * Normally these generic methods would be used in a BaseActivity class.
-     * For simplicity I added them here and forewent the BaseActivity approach.
+     * For simplicity I added them here and forewent the BaseActivity approach
+     * since I only have one activity.
      */
 
     public <T extends TimerViewController> void setViewController(Class<T> clazz, Bundle savedInstanceState) {
