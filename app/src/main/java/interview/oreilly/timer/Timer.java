@@ -14,6 +14,9 @@ public class Timer  {
 
     private boolean mPaused, mFinished;
 
+    private final int interval = 1000; // 1 second
+
+    private int mStartTime;
 
     Runnable runnable = new Runnable() {
         @Override
@@ -28,10 +31,6 @@ public class Timer  {
             }
         }
     };
-
-    private final int interval = 1000; // 1 second
-
-    private int mStartTime;
 
     public void startCountdown(int startTime) {
         mStartTime = startTime;

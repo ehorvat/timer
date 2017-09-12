@@ -1,11 +1,8 @@
 package interview.oreilly.timer;
 
-import android.content.Context;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 
 public class TimerActivity extends AppCompatActivity {
 
