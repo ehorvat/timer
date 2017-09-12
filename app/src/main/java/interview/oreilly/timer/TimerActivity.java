@@ -14,6 +14,11 @@ public class TimerActivity extends AppCompatActivity {
         setViewController(TimerViewController.class, savedInstanceState);
     }
 
+    /*
+     * Normally these generic methods would be used in a BaseActivity class.
+     * For simplicity I added them here and forewent the BaseActivity approach.
+     */
+
     public <T extends TimerViewController> void setViewController(Class<T> clazz, Bundle savedInstanceState) {
         T viewController = createViewController(clazz, savedInstanceState);
         if (viewController == null) {
