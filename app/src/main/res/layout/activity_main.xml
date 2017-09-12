@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="interview.oreilly.timer.TimerActivity">
+
+    <LinearLayout
+        style="@style/LinearLayoutVertical"
+        android:padding="10dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textinputlayout_timer"
+            style="@style/LayoutExpandVertically">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/textinputedittext_timer"
+                android:inputType="number"
+                style="@style/Text.Editable.Integer" />
+
+            <TextView
+                android:id="@+id/textview_timer_error"
+                style="@style/Text.Error.Login" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            style="@style/LinearLayoutHorizontal"
+            android:padding="10dp">
+            <!--android:enabled="false" -->
+            <Button
+                android:id="@+id/button_start_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/start_timer"/>
+
+            <Button
+                android:id="@+id/button_pause_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pause_timer"/>
+
+            <Button
+                android:id="@+id/button_reset_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reset_timer"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textview_timer_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40dp"
+            android:layout_gravity="center"
+            android:text="@string/zero"/>
+
+    </LinearLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
